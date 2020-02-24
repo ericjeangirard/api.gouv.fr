@@ -9,7 +9,7 @@
     "start": "NODE_ENV=production node server.js",
     "build": "next build",
     "lint": "eslint '**/*.{js,jsx}' --max-warnings 20",
-    "test": "jest"
+    "test": "jest --watch"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.20.0",
