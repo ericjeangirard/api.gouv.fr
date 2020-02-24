@@ -8,7 +8,8 @@
     "dev": "node server.js",
     "start": "NODE_ENV=production node server.js",
     "build": "next build",
-    "lint": "eslint '**/*.{js,jsx}' --max-warnings 20"
+    "lint": "eslint '**/*.{js,jsx}' --max-warnings 20",
+    "test": "jest"
   },
   "husky": {
     "hooks": {
@@ -29,7 +30,7 @@
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-react-hooks": "^1.7.0",
     "husky": "^4.2.3",
-    "lunr": "^2.3.8",
+    "jest": "^25.1.0",
     "prettier": "^1.19.1",
     "typescript": "^3.7.5"
   },
