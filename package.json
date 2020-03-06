@@ -31,6 +31,7 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "husky": "^4.2.3",
     "jest": "^25.1.0",
+    "front-matter": "^3.0.2",
     "prettier": "^1.19.1",
     "@zeit/next-sass": "^1.0.1",
     "node-sass": "^4.13.1",
