@@ -153,13 +153,11 @@ const API = ({ api, services }) => {
       <div id="description" className="content-container">
         <div className="ui equal width grid padded">
           <div className="four wide column computer only">
-            <div className=" sticky-column">
-              <Menu
-                detail={detail}
-                selectedItem={menuItem}
-                select={setVisibleAnchor}
-              />
-            </div>
+            <Menu
+              detail={detail}
+              selectedItem={menuItem}
+              select={setVisibleAnchor}
+            />
           </div>
           <div className="column" ref={contentContainer}>
             <Content content={content} />
@@ -198,14 +196,6 @@ const API = ({ api, services }) => {
           </div>
         </div>
       </div>
-      <style jsx>{`
-        .sticky-column {
-          position: sticky;
-          overflow: hidden;
-          top: ${parseInt(constants.layout.HEADER_HEIGHT, 10) + 20}px;
-          padding-bottom: 15px;
-        }
-      `}</style>
     </Page>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import constants from '../../constants';
+import './menuStyles.scss';
 
 const MENU_OPTIONS = [
   {
@@ -48,7 +48,7 @@ const Menu = ({ detail, selectedItem, select }) => {
     }
   };
   return (
-    <div className="menu">
+    <div id="api-page-menu">
       {MENU_OPTIONS.map(menu => (
         <div key={menu.id}>
           <div
@@ -67,36 +67,6 @@ const Menu = ({ detail, selectedItem, select }) => {
           </div>
         </div>
       ))}
-      <style jsx>{`
-        .menu {
-          border-radius: 4px;
-          max-width: 245px;
-          display: flex;
-          flex-direction: column;
-          background-color: #fff;
-          border: 2px solid ${constants.colors.lightGrey};
-        }
-        .item {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 1em;
-          font-weight: bold;
-          font-size: 14px;
-          line-height: 18px;
-          color: black;
-          transition: background 100ms ease-in-out, border 100ms ease-in-out;
-          cursor: pointer;
-        }
-        .item:hover,
-        .item.selected:hover {
-          background-color: ${constants.colors.lightBlue};
-        }
-        .item.selected {
-          border-left: 5px solid ${constants.colors.blue};
-          background-color: ${constants.colors.lightestBlue};
-        }
-      `}</style>
     </div>
   );
 };

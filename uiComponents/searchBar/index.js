@@ -1,8 +1,9 @@
 import React, { useRef, useState } from 'react';
 import { debounce } from 'lodash';
-
 import { Search } from 'react-feather';
+
 import constants from '../../constants';
+
 import './searchBarStyles.scss';
 
 const SearchBar = ({

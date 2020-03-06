@@ -2,8 +2,9 @@ import React, { useEffect, useRef, Fragment } from 'react';
 import Link from 'next/link';
 import { throttle } from 'lodash';
 
-import { ButtonLink } from '../../uiComponents/button';
 import constants from '../../constants';
+import { ButtonLink } from '../../uiComponents/button';
+
 import './headerStyles.scss';
 
 export const HEADER_PAGE = {

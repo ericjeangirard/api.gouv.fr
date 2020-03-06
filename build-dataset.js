@@ -9,7 +9,7 @@ const DEFAULT_LOGO = 'logo-beta-gouv.svg';
 function apiToAPIV1(api) {
   return {
     title: api.title,
-    url: `/api/${api.slug}`,
+    url: `/api-service-public/${api.slug}`,
     description: api.tagline,
     image: api.logo || DEFAULT_LOGO,
     domain: api.domain,

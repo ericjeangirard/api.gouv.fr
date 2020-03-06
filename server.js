@@ -53,20 +53,24 @@ app.prepare().then(async () => {
     res.send(summary);
   });
 
-  server.get('/api/:apiId', (req, res) => {
+  server.get('/api-service-public/:apiId', (req, res) => {
     const { apiId } = req.params;
 
     // Support des anciennes URL finissant par .html
     if (apiId.endsWith('.html')) {
-      return res.redirect('/api/' + apiId.substring(0, apiId.indexOf('.html')));
+      return res.redirect(
+        '/api-service-public/' + apiId.substring(0, apiId.indexOf('.html'))
+      );
     }
 
     // Alias
     if (apiId in apisAliasesIndex) {
-      return res.redirect('/api/' + apisAliasesIndex[apiId].slug);
+      return res.redirect(
+        '/api-service-public/' + apisAliasesIndex[apiId].slug
+      );
     }
 
-    return app.render(req, res, '/api', { apiId });
+    return app.render(req, res, '/api-service-public', { apiId });
   });
 
   server.get('/services/all', (req, res) => {

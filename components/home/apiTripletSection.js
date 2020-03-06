@@ -1,9 +1,9 @@
 import React from 'react';
 
 import ApiCard from '../searchApis/apiCard';
-import constants from '../../constants';
-
 import { ButtonLink } from '../../uiComponents';
+
+import './apiTripletSectionStyles.scss';
 
 const ApiTripletSection = ({ apiList }) => (
   <section id="apis">
@@ -23,20 +23,6 @@ const ApiTripletSection = ({ apiList }) => (
         Voir toutes les APIs ☞
       </ButtonLink>
     </div>
-    <style jsx>{`
-      section#apis {
-        background: ${constants.colors.backgroundBlueGradient};
-        padding: 50px 0;
-      }
-
-      section#apis h3 {
-        color: #fff;
-        font-weight: 400;
-      }
-      section > div:last-child {
-        padding: 40px 0 0;
-      }
-    `}</style>
   </section>
 );
 

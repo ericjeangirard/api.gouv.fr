@@ -1,0 +1,37 @@
+@import '../../constants/colors.scss';
+@import '../../constants/layout.scss';
+
+#api-page-menu {
+  position: sticky;
+  overflow: hidden;
+  top: #{$headerHeight + 20}px;
+  padding-bottom: 15px;
+  border-radius: 4px;
+  max-width: 245px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 2px solid $lightGrey;
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: black;
+    transition: background 100ms ease-in-out, border 100ms ease-in-out;
+    cursor: pointer;
+
+    &:hover,
+    &.selected:hover {
+      background-color: $lightBlue;
+    }
+    &.selected {
+      border-left: 5px solid $blue;
+      background-color: $lightestBlue;
+    }
+  }
+}

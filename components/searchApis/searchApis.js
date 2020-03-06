@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-import FilterHeader from './filterHeader';
 import Results from './results';
+import FilterHeader from './filterHeader';
 import {
   filterTheme,
   filterAccess,

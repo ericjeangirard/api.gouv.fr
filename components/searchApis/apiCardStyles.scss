@@ -1,0 +1,53 @@
+a.api-card {
+  text-decoration: none;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1) !important;
+  transition: transform 200ms ease-in-out !important,
+    box-shadow 200ms ease-in-out !important;
+
+  &:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  img {
+    display: none;
+  }
+
+  .card-extra {
+    padding: 0.5em 1em;
+    color: #222;
+  }
+
+  .card-footer {
+    background-color: #fafafa;
+    border-top: 1px solid #eaeaea;
+    padding: 15px;
+  }
+
+  .badges {
+    display: flex;
+    align-items: center;
+    flex-flow: wrap;
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      font-size: small;
+
+      &.filler {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  .contract div {
+    margin-left: 0.5em;
+  }
+
+  .uptime-stat {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin: 0 0.2em;
+  }
+}

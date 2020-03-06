@@ -1,14 +1,14 @@
 import React from 'react';
-
-import Thumbnail from './thumbnail';
-
 import { Lock, Unlock, Activity, Calendar, User, Sliders } from 'react-feather';
 
+import Thumbnail from './thumbnail';
 import { getUptimeState, roundUptime } from '../../../utils/uptime';
+
+import './styles.scss';
 
 const Thumbnails = ({ is_open, uptime, lastUpdate, owner, rate_limiting }) => {
   return (
-    <div className="content-container thumbnails">
+    <div className="content-container" id="thumbnail-wrapper">
       {is_open ? (
         <Thumbnail title="Accès" icon={<Unlock />}>
           API ouvert à tous
@@ -21,7 +21,10 @@ const Thumbnails = ({ is_open, uptime, lastUpdate, owner, rate_limiting }) => {
       {uptime && (
         <Thumbnail title="Disponibilité" icon={<Activity />}>
           <div className="badge uptime">
-            <div className="uptime-stat" />
+            <div
+              className="uptime-stat"
+              style={{ backgroundColor: getUptimeState(uptime) }}
+            />
             {roundUptime(2)(uptime)}% actif / dernier mois
           </div>
         </Thumbnail>
@@ -43,39 +46,6 @@ const Thumbnails = ({ is_open, uptime, lastUpdate, owner, rate_limiting }) => {
           </div>
         </Thumbnail>
       )}
-
-      <style jsx>{`
-        .thumbnails {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, 200px);
-          justify-content: space-between;
-          grid-gap: 1em;
-          margin: 1em auto;
-        }
-
-        .badge {
-          display: inline-flex;
-          align-items: center;
-        }
-
-        .uptime-stat {
-          min-width: 10px;
-          min-height: 10px;
-          border-radius: 100%;
-          margin: 0 0.5em;
-          background-color: ${getUptimeState(uptime)};
-        }
-
-        .rate:not(:first-child):before {
-          content: '/ ';
-        }
-
-        @media (max-width: 445px) {
-          .thumbnails {
-            justify-content: center;
-          }
-        }
-      `}</style>
     </div>
   );
 };
